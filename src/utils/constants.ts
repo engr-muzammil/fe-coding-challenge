@@ -1,6 +1,4 @@
-import exp from "constants"
-
-export const BurgerPrice = [
+export const BurgerPrice: any = [
     {
         name: "hamburger", 
         basePrice: 5.0
@@ -13,9 +11,9 @@ export const BurgerPrice = [
         name: "chilli cheeseburger", 
         basePrice: 8.0   
     }
-]
+] as const
 
-export const BurgerVariant = [
+export const BurgerVariant: any = [
     {
         name: "small (s)", 
         shortName: 's',
@@ -31,9 +29,9 @@ export const BurgerVariant = [
         shortName: 'l',
         factor: 1.3   
     }
-]
+] as const
 
-export const PromotionCodes = [
+export const PromotionCodes: any = [
     {
         type: 'promotion code',
         code: '3DF'
@@ -42,8 +40,8 @@ export const PromotionCodes = [
         type: 'promotion code',
         code: '2FG'
     },
-]
-export const DiscountCodes = [
+] as const
+export const DiscountCodes: any = [
     {
         type: 'discount code',
         code: '10PC',
@@ -59,4 +57,4 @@ export const DiscountCodes = [
         code: '50PC', 
         pc: 20
     },
-]
+] as const
