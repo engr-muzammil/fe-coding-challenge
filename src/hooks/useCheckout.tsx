@@ -10,13 +10,13 @@ export const useCheckout = () => {
     const [discountCodeNotValid, setDiscountCodeNotValid] = React.useState(false)
 
     function AddPromotion(promotion: string){
-      if(PromotionCodes.find(o => o.code == promotion) != null){
+      if(PromotionCodes.find((o: { code: string; }) => o.code == promotion) != null){
         setPromotion(order[1].total)
       } else setPromotionCodeNotValid(true)
       
     }
     function AddDiscount(discount: string){
-      let code = DiscountCodes.find(o => o.code == discount)
+      let code = DiscountCodes.find((o: { code: string; }) => o.code == discount)
       if(code != null){
         setDiscount(order.reduce((sum: number, object: any) => { return sum + object.total;}, 0)*(code.pc/100));
       } else setDiscountCodeNotValid(true)
